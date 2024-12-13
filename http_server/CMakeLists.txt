@@ -22,5 +22,5 @@ target_include_directories(HttpServerApp PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})
 target_link_libraries(HttpServerApp ParserLib)
 
 set(INI_SOURCE ../config/settings.ini)
-set(INI_DESTINATION ${CMAKE_CURRENT_BINARY_DIR}/config)
+set(INI_DESTINATION ${CMAKE_CURRENT_BINARY_DIR})
 file(COPY ${INI_SOURCE} DESTINATION ${INI_DESTINATION})

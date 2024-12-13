@@ -1,4 +1,4 @@
-#include <chrono>
+﻿#include <chrono>
 #include <cstdlib>
 #include <ctime>
 #include <iostream>
@@ -38,7 +38,7 @@ int main(int argc, char* argv[])
 			" password=" + parser.get_value<std::string>("DataBase.password");
 
 		auto const address = net::ip::make_address("0.0.0.0");
-		unsigned short port = 8080;
+		unsigned short port = parser.get_value<int>("Server.port");
 
 		net::io_context ioc{1};
 
@@ -46,7 +46,7 @@ int main(int argc, char* argv[])
 		tcp::socket socket{ioc};
 		httpServer(acceptor, socket, conString);
 
-		std::cout << "Open browser and connect to http://localhost:8080 to see the web server operating" << std::endl;
+		std::cout << "Open browser and connect to http://localhost:" << port << " to see the web server operating" << std::endl;
 
 		ioc.run();
 	}

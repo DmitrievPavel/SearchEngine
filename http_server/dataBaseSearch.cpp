@@ -1,4 +1,4 @@
-#include "dataBaseSearch.h"
+﻿#include "dataBaseSearch.h"
 #include <boost/algorithm/string/trim.hpp>
 #include <boost/algorithm/string/split.hpp>
 #include <boost/algorithm/string_regex.hpp>

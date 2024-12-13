@@ -230,11 +230,11 @@ std::vector<Link> getLinks(const std::string& html, const Link& HomeLink)
 		}
 		iter++;
 
-		//if (links.size() > 20)
-		//{
-		//	iter = end;
-		//	continue;
-		//}
+		if (links.size() > 30)
+		{
+			iter = end;
+			continue;
+		}
 
 		auto it = std::find_if(links.begin(), links.end(), [&](const Link& el) 
 			{
